@@ -1,3 +1,5 @@
+// src/pages/ayudar.tsx
+
 import React, { useState, useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -14,7 +16,7 @@ export default function AyudarPage() {
   const [language, setLanguage] = useState<'en' | 'es'>('es');
 
   const headerRef = useRef<HTMLHeadingElement>(null);
-  const pRefs = useRef<HTMLParagraphElement[]>([]);
+  const pRefs = useRef<(HTMLParagraphElement | null)[]>([]);
 
   const toggleLanguage = () => {
     setLanguage(prevLang => (prevLang === 'en' ? 'es' : 'en'));
@@ -87,21 +89,21 @@ export default function AyudarPage() {
           </h1>
           <div id="oneThruThree" className='flex flex-col gap-14'>
             <div id="numOne" className='flex flex-col gap-4 w-full xs:w-100 md:w-1/3 lg:w-1/3 text-base xs:text-sm lg:text-base'>
-              <p ref={el => (pRefs.current[0] = el)}>{t.Num1HEADER}</p>
-              <p ref={el => (pRefs.current[1] = el)}>{t.Num1PARAGRAPH}</p>
-              <HoverableText t={parseTranslation(t.Num1CTA)} />
+              <p ref={el => { pRefs.current[0] = el; }}>{t.Num1HEADER}</p>
+              <p ref={el => { pRefs.current[1] = el; }}>{t.Num1PARAGRAPH}</p>
+              <HoverableText t={parseTranslation(t.Num1CTA) as unknown as string} />
             </div>
             
             <div id="numTwo" className='flex flex-col gap-4 w-full xs:w-100 md:w-1/3 lg:w-1/3 text-base xs:text-sm lg:text-base'>
-              <p ref={el => (pRefs.current[2] = el)}>{t.Num2HEADER}</p>
-              <p ref={el => (pRefs.current[3] = el)}>{t.Num2PARAGRAPH}</p>
-              <HoverableText t={parseTranslation(t.Num2CTA)} />
+              <p ref={el => { pRefs.current[2] = el; }}>{t.Num2HEADER}</p>
+              <p ref={el => { pRefs.current[3] = el; }}>{t.Num2PARAGRAPH}</p>
+              <HoverableText t={parseTranslation(t.Num2CTA) as unknown as string} />
             </div>
             
             <div id="numThree" className='flex flex-col gap-4 w-full xs:w-100 md:w-1/3 lg:w-1/3 text-base xs:text-sm lg:text-base'>
-              <p ref={el => (pRefs.current[4] = el)}>{t.Num3HEADER}</p>
-              <p ref={el => (pRefs.current[5] = el)}>{t.Num3PARAGRAPH}</p>
-              <HoverableText t={parseTranslation(t.Num3CTA)} />
+              <p ref={el => { pRefs.current[4] = el; }}>{t.Num3HEADER}</p>
+              <p ref={el => { pRefs.current[5] = el; }}>{t.Num3PARAGRAPH}</p>
+              <HoverableText t={parseTranslation(t.Num3CTA) as unknown as string} />
             </div>
           </div>
 

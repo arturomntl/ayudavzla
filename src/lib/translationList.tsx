@@ -1,4 +1,6 @@
-// lib/translationsAyudar.ts
+// lib/translationList.ts
+import { TranslationsMap } from './types';  // Adjust the path if necessary
+
 const translationsList: TranslationsMap = {
   en: {
     NAV_BAR: "HELP VZLA",

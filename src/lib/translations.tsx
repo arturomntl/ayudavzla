@@ -1,4 +1,4 @@
-// lib/translations.ts
+// lib/translations.tsx
 const translations = {
   en: {
     NAV_BAR: "HELP VZLA",

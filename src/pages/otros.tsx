@@ -1,3 +1,5 @@
+// src/pages/otros.tsx
+
 import React, { useState, useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import HoverableText from '@/components/HoverableText';
@@ -5,11 +7,12 @@ import Accordion from '@/components/Accordion';
 import translationsOtros from '@/lib/translationsOtros';
 import { GeistMono } from "geist/font/mono";
 import Link from 'next/link';
+import { TranslationsMap } from '@/lib/types'; // Import the type
 
 gsap.registerPlugin();
 
 export default function Otros() {
-  const [language, setLanguage] = useState('es');
+  const [language, setLanguage] = useState<'en' | 'es'>('es');
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const headerRef = useRef<HTMLHeadingElement>(null);
@@ -20,7 +23,7 @@ export default function Otros() {
     setLanguage((prevLang) => (prevLang === 'en' ? 'es' : 'en'));
   };
 
-  const t = translationsOtros[language];
+  const t = (translationsOtros as TranslationsMap)[language];
 
   const handleToggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);

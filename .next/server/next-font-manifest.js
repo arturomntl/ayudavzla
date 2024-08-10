@@ -1,1 +1,1 @@
-self.__NEXT_FONT_MANIFEST="{\"pages\":{\"/\":[\"static/media/66f30814ff6d7cdf.p.woff2\"]},\"app\":{},\"appUsingSizeAdjust\":false,\"pagesUsingSizeAdjust\":false}"
+self.__NEXT_FONT_MANIFEST="{\"pages\":{\"/thelist\":[\"static/media/66f30814ff6d7cdf.p.woff2\"],\"/\":[\"static/media/66f30814ff6d7cdf.p.woff2\"],\"/ayudar\":[\"static/media/66f30814ff6d7cdf.p.woff2\"]},\"app\":{},\"appUsingSizeAdjust\":false,\"pagesUsingSizeAdjust\":false}"

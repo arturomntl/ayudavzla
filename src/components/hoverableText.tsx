@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function HoverableText({ children, t }: { children: React.ReactNode; t: string }) {
+function HoverableText({ children, t }: { children?: React.ReactNode; t: string | JSX.Element }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -9,11 +9,10 @@ function HoverableText({ children, t }: { children: React.ReactNode; t: string }
       onMouseLeave={() => setIsHovered(false)}
       className="py-2 hover:underline active:text-red-500"
     >
-      {t}
+      {children || t}
       {isHovered && ' <-'}
     </div>
   );
 }
 
 export default HoverableText;
-

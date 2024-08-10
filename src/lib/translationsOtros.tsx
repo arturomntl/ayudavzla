@@ -1,5 +1,7 @@
 // lib/translationsOtros.ts
-const translationsOtros = {
+import { TranslationsMap } from './types'; // Adjust the import path if necessary
+
+const translationsOtros: TranslationsMap = {
   en: {
     NAV_BAR: "HELP VZLA",
     PAGETITLE: "OTHER RESOURCES",
@@ -44,6 +46,6 @@ const translationsOtros = {
     RES8_CONTENT: "La gente tiene curiosidad sobre las consecuencias de que varios países reconozcan a Guaidó como presidente interino y cómo esto afecta las relaciones internacionales de Venezuela.",
     FOOTER: "Este sitio web no se beneficia de la crisis en Venezuela, ni apoya a Maduro.",
   }
-}
+};
 
 export default translationsOtros;

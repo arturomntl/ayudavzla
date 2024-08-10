@@ -1,3 +1,5 @@
+// src/pages/index.tsx
+
 import React, { useState, useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import ImageFrame from '@/components/ImageFrame';
@@ -6,18 +8,18 @@ import HoverableText from '@/components/HoverableText';
 import translations from '@/lib/translations';
 import Link from 'next/link';
 import { GeistMono } from "geist/font/mono";
+import { TranslationsMap } from '@/lib/types'; // Import the type
 
 export default function Home() {
-  const [language, setLanguage] = useState('es');
+  const [language, setLanguage] = useState<'en' | 'es'>('es'); // Strictly type the language
   const headerRef = useRef<HTMLHeadingElement>(null);
   const pRef = useRef<HTMLParagraphElement>(null);
-  const linkRefs = useRef<(HTMLSpanElement | HTMLParagraphElement)[]>([]);
 
   const toggleLanguage = () => {
     setLanguage(prevLang => (prevLang === 'en' ? 'es' : 'en'));
   };
 
-  const t = translations[language];
+  const t = (translations as TranslationsMap)[language]; // Explicitly type translations
 
   useEffect(() => {
     if (headerRef.current) {
@@ -27,12 +29,6 @@ export default function Home() {
     if (pRef.current) {
       gsap.fromTo(pRef.current, { opacity: 0, filter: 'blur(5px)' }, { opacity: 1, filter: 'blur(0px)', duration: 2, delay: 0.3 });
     }
-
-    linkRefs.current.forEach((ref, index) => {
-      if (ref) {
-        gsap.fromTo(ref, { opacity: 0, filter: 'blur(5px)' }, { opacity: 1, filter: 'blur(0px)', duration: 2, delay: 1.5 + index * 0.3 });
-      }
-    });
   }, [language]);
 
   return (
@@ -45,13 +41,13 @@ export default function Home() {
             {t.PARAGRAPH}
           </p>
           <div className="flex flex-col gap-4 xs:text-sm lg:text-base">
-            <Link href="/ayudar" ref={el => linkRefs.current[0] = el as HTMLSpanElement}>
+            <Link href="/ayudar" passHref>
               <HoverableText t={t.COMPONENT} />
             </Link>
-            <Link href="/otros" ref={el => linkRefs.current[1] = el as HTMLSpanElement}>
+            <Link href="/otros" passHref>
               <HoverableText t={t.OPTION} />
             </Link>
-            <p ref={el => linkRefs.current[2] = el} className="bottom-0 text-xs lg:text-sm text-neutral-400 lg:w-2/3">
+            <p className="bottom-0 text-xs lg:text-sm text-neutral-400 lg:w-2/3">
               {t.FOOTER}
             </p>
           </div>

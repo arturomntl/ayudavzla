@@ -1,3 +1,7 @@
+//src/pages/theList.tsx
+
+
+
 import React, { useEffect, useRef } from 'react';
 import ImageFrame from '@/components/ImageFrame';
 import Link from 'next/link';

@@ -1,4 +1,4 @@
-// lib/translationsAyudar.ts
+// lib/translationsAyudar.tsx
 import { TranslationsMap } from './types';
 
 const translationsAyudar: TranslationsMap = {
