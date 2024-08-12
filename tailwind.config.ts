@@ -17,6 +17,7 @@ const config: Config = {
       },
       fontSize: {
         '10xl': '14rem',  // 256px
+        '11xl': '19rem',
       },
     },
   },

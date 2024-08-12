@@ -1,9 +1,1 @@
-{
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/thelist": "pages/thelist.js",
-  "/ayudar": "pages/ayudar.js",
-  "/otros": "pages/otros.js"
-}
+{"/_app":"pages/_app.js","/_error":"pages/_error.js","/404":"pages/404.html","/_document":"pages/_document.js","/api/hello":"pages/api/hello.js","/ayudar":"pages/ayudar.html","/":"pages/index.html","/otros":"pages/otros.html","/thelist":"pages/thelist.html"}

@@ -1,5 +1,5 @@
 // lib/translationsAyudar.tsx
-import { TranslationsMap } from './types';
+import { TranslationsMap } from './typesAyudar'; // Adjust the path if necessary
 
 const translationsAyudar: TranslationsMap = {
   en: {
@@ -17,7 +17,7 @@ const translationsAyudar: TranslationsMap = {
     COMPONENT: "HOME PAGE",
     OPTION: "OTHER RESOURCES",
     FOOTER: "This website does not profit from the crisis in Venezuela, nor does it support Maduro.",
-    BUTTON: "Translate to Spanish"
+    BUTTON: "TRADUCIR AL ESP"
   },
   es: {
     NAV_BAR: "AYUDA VZLA",
@@ -34,7 +34,7 @@ const translationsAyudar: TranslationsMap = {
     COMPONENT: "PAGINA INICIAL",
     OPTION: "OTROS RECURSOS",
     FOOTER: "Este sitio web no se beneficia de la crisis en Venezuela, ni apoya a Maduro.",
-    BUTTON: "Translate to English"
+    BUTTON: "TRANSLATE TO EN"
   }
 };
 

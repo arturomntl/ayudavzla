@@ -1,5 +1,7 @@
 // lib/translations.tsx
-const translations = {
+import { TranslationsMap } from './typesIndex'; // Adjust the path if necessary
+
+const translations: TranslationsMap = {
   en: {
     NAV_BAR: "HELP VZLA",
     HEADER: "HELP VENEZUELA FROM THE U.S.",
@@ -7,7 +9,7 @@ const translations = {
     COMPONENT: "HOW TO HELP VZLA",
     OPTION: "OTHER RESOURCES",
     FOOTER: "This website does not profit from the crisis in Venezuela, nor does it support Maduro.",
-    BUTTON: "Translate to Spanish"
+    BUTTON: "TRADUCIR AL ESP"
   },
   es: {
     NAV_BAR: "AYUDA VZLA",
@@ -16,7 +18,7 @@ const translations = {
     COMPONENT: "COMO AYUDAR VZLA",
     OPTION: "OTRO RECURSOS",
     FOOTER: "Este sitio web no se beneficia de la crisis en Venezuela, ni apoya a Maduro.",
-    BUTTON: "Translate to English"
+    BUTTON: "TRANSLATE TO EN"
   }
 };
 

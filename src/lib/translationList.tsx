@@ -1,5 +1,5 @@
-// lib/translationList.ts
-import { TranslationsMap } from './types';  // Adjust the path if necessary
+// lib/translationList.tsx
+import { TranslationsMap } from './typesList';  // Adjust the path if necessary
 
 const translationsList: TranslationsMap = {
   en: {
@@ -8,7 +8,7 @@ const translationsList: TranslationsMap = {
     COMPONENT: "HOW TO HELP VZLA",
     OPTION: "HOME PAGE",
     FOOTER: "This website does not profit from the crisis in Venezuela, nor does it support Maduro.",
-    BUTTON: "Translate to Spanish",
+    BUTTON: "TRADUCIR AL ESP",
     L1: "USAID: Provides significant humanitarian assistance to Venezuela, including food, health, and other essential services",
     L2:"Venezuelans and Immigrants Aid (VIA): A volunteer-based non-profit organization founded by Venezuelan migrants that serves displaced people from Venezuela and other countries",
     L3: "Caritas Venezuela: Maintains active alliances with various national and international organizations to provide humanitarian aid within Venezuela.",
@@ -20,7 +20,7 @@ const translationsList: TranslationsMap = {
     COMPONENT: "COMO AYUDAR VZLA",
     OPTION: "PAGINA INICIAL",
     FOOTER: "Este sitio web no se beneficia de la crisis en Venezuela, ni apoya a Maduro.",
-    BUTTON: "Translate to English",
+    BUTTON: "TRANSLATE TO EN",
     L1: "USAID: Proporciona asistencia humanitaria significativa a Venezuela, incluyendo alimentos, salud y otros servicios esenciales.",
     L2:"Ayuda a Venezolanos e Inmigrantes (VIA): Una organización sin fines de lucro basada en voluntarios fundada por migrantes venezolanos que atiende a personas desplazadas de Venezuela y otros países",
     L3: "Caritas Venezuela: Mantiene alianzas activas con diversas organizaciones nacionales e internacionales para brindar ayuda humanitaria dentro de Venezuela.",
