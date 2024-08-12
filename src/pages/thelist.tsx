@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef } from 'react';
 import Head from 'next/head';
-import ImageFrame from '@/components/ImageFrame';
 import Link from 'next/link';
 import HoverableText from '@/components/HoverableText';
 import translations from '@/lib/translationList';
