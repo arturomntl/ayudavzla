@@ -2,9 +2,11 @@
   "name": "manoayudame",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
@@ -17,6 +19,7 @@
     "i18next": "^23.12.2",
     "next": "14.2.5",
     "next-i18next": "^15.3.1",
+    "next-sitemap": "^4.2.3",
     "react": "^18",
     "react-dom": "^18",
     "react-i18next": "^15.0.0",
