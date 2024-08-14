@@ -5,6 +5,7 @@ import Head from 'next/head';
 import gsap from 'gsap';
 import HoverableText from '@/components/HoverableText';
 import Accordion from '@/components/Accordion';
+import NavBar from '@/components/NavBar';
 import translationsOtros from '@/lib/translationsOtros';
 import { GeistMono } from "geist/font/mono";
 import Link from 'next/link';
@@ -92,18 +93,7 @@ export default function Otros() {
         <meta name="twitter:image" content="/VzlaFlag.png" />
       </Head>
       <main id="mainPage" className={`min-h-screen px-4 xs:p-0 flex flex-col w-full ${GeistMono.className}`}>
-        <div id="navBar" className="justify-between sticky top-0 z-10 flex flex-row text-base px-8 pb-8 py-2 items-center">
-          <Link href="/" className='hover:underline'>
-            {t.NAV_BAR}
-          </Link>
-          <button
-            id="toggleLANG"
-            onClick={toggleLanguage}
-            className="text-white active:text-red-500 lg:text-lg"
-          >
-            <HoverableText t={t.BUTTON}/>
-          </button>
-        </div>
+        <NavBar t={t} language={language} toggleLanguage={toggleLanguage} />
 
         <div className='container mx-auto p-4'>
           <h1 ref={headerRef} className='w-max text-3xl xs:text-2xl sm:text-4xl md:text-5xl xl:text-8xl lg:text-5xl mx-auto text-center p-4'>

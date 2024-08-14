@@ -43,7 +43,7 @@ const Timeline: React.FC = () => {
         <title>Two Weeks Summary of Maduro Re-election</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <main className={`min-h-screen bg-black text-white pb-8 ${GeistMono.className}`}>
+      <main className={`min-h-screen bg-black text-white pb-8 px-4 ${GeistMono.className}`}>
         <NavBar t={t} language={language} toggleLanguage={toggleLanguage} />
         <div className="container mx-auto px-2">
           <div className="relative">
