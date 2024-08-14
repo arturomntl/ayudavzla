@@ -92,10 +92,10 @@ export default function Otros() {
         <meta name="twitter:description" content="Find other resources to help Venezuela." />
         <meta name="twitter:image" content="/VzlaFlag.png" />
       </Head>
-      <main id="mainPage" className={`min-h-screen px-4 xs:p-0 flex flex-col w-full ${GeistMono.className}`}>
+      <main id="mainPage" className={`min-h-screen px-4 flex flex-col w-full ${GeistMono.className}`}>
         <NavBar t={t} language={language} toggleLanguage={toggleLanguage} />
 
-        <div className='container mx-auto p-4'>
+        <div className='container mx-auto'>
           <h1 ref={headerRef} className='w-max text-3xl xs:text-2xl sm:text-4xl md:text-5xl xl:text-8xl lg:text-5xl mx-auto text-center p-4'>
             {t.PAGETITLE}
           </h1>
