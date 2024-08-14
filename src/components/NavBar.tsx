@@ -12,7 +12,7 @@ interface NavBarProps {
 
 const NavBar: React.FC<NavBarProps> = ({ t, toggleLanguage, language }) => {
   return (
-    <div className="flex justify-between items-center p-4 text-white">
+    <div className="z-50 flex justify-between items-center p-4 text-white">
       <Link href="/" className='hover:underline'>
         {t.NAV_BAR}
       </Link>

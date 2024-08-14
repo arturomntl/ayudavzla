@@ -23,7 +23,7 @@ class MyDocument extends Document {
           <meta name="twitter:description" content="Help Venezuela from the U.S. Find resources and ways to support Venezuela." />
           <meta name="twitter:image" content="/VzlaFlag.png" />
         </Head>
-        <body className={pageClass}>
+        <body className={`${pageClass} bg-black text-white`}>
           <Main />
           <NextScript />
         </body>

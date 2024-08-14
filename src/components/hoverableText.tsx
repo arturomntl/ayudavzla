@@ -16,3 +16,6 @@ function HoverableText({ children, t }: { children?: React.ReactNode; t: string 
 }
 
 export default HoverableText;
+
+
+//Made it capitalized

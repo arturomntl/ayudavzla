@@ -51,20 +51,24 @@ export default function Home() {
         <NavBar t={t} language={language} toggleLanguage={toggleLanguage} />
         <div id="parent" className="flex flex-col lg:flex-row h-screen">
           <div className="flex-1 basis-3/5 px-4 text-left flex flex-col gap-32 xs:gap-12 lg:gap-8 xl:gap-8">
-            <h1 ref={headerRef} className="w-max text-3xl xs:text-2xl xl:text-5xl lg:text-5xl">{t.HEADER}</h1>
+            <h1 ref={headerRef} className="w-full text-3xl xs:text-2xl xl:text-5xl lg:text-5xl">{t.HEADER}</h1>
             <p ref={pRef} className="w-full lg:w-2/3 text-base xs:text-sm lg:text-base">
               {t.PARAGRAPH}
             </p>
             <div className="flex flex-col gap-4 xs:text-sm lg:text-base">
+              <Link href="/timeline" passHref>
+                <HoverableText t={t.TIMELINE} />
+              </Link>
               <Link href="/ayudar" passHref>
                 <HoverableText t={t.COMPONENT} />
               </Link>
               <Link href="/otros" passHref>
                 <HoverableText t={t.OPTION} />
               </Link>
-              <p className="bottom-0 text-xs lg:text-sm text-neutral-400 lg:w-2/3">
+              <p className="bottom-0 text-xs lg:text-sm text-neutral-400 lg:w-2/3 bg-black bg-opacity-50 backdrop-blur-md rounded">
                 {t.FOOTER}
               </p>
+
             </div>
           </div>
           <div className="flex-1 lg:basis-2/5 aspect-video relative lg:static">

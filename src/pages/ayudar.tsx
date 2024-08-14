@@ -5,6 +5,7 @@ import Head from 'next/head';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import ImageFrame from '@/components/ImageFrame';
+import NavBar from '@/components/NavBar';
 import Link from 'next/link';
 import HoverableText from '@/components/HoverableText';
 import translationsAyudar from '@/lib/translationsAyudar';
@@ -79,23 +80,11 @@ export default function AyudarPage() {
         <meta name="twitter:image" content="/VzlaFlag.png" />
       </Head>
       <main className={`relative min-h-screen px-4 flex flex-col w-full ${GeistMono.className}`}>
-        <div id="navBar" className="justify-between sticky top-0 z-30 flex flex-row text-base px-4 pb-8 py-2 items-center">
-          <Link href="/" className='hover:underline'>
-            {t.NAV_BAR}
-          </Link>
-
-          <button
-            id="toggleLANG"
-            onClick={toggleLanguage}
-            className="text-white active:text-red-500 lg:text-lg"
-          >
-            <HoverableText t={t.BUTTON} />
-          </button>
-        </div>
+        <NavBar t={t} language={language} toggleLanguage={toggleLanguage} />
 
         <div id="parent" className="absolute inset-0 flex flex-col lg:flex-row z-20 pt-8">
           <div className="flex-1 basis-3/5 p-4 text-left flex flex-col gap-32 xs:gap-12 lg:gap-8 xl:gap-8">
-            <h1 ref={headerRef} className="w-max text-3xl xs:pt-10 sm:pt-8 md:pt-8 lg:pt-8 xs:text-7xl md:text-9xl lg:text-10xl xl:text-10xl whitespace-pre-wrap">
+            <h1 id="ayuHdr" ref={headerRef} className="w-full text-3xl xs:pt-10 sm:pt-8 md:pt-8 lg:pt-8 crcs:text-35xl xs:text-7xl sm:text-8xl md:text-9xl lg:text-10xl xl:text-10xl whitespace-pre-wrap">
               {t.HEADER.split('\n').map((line, index) => (
                 <React.Fragment key={index}>
                   {line}
@@ -128,13 +117,13 @@ export default function AyudarPage() {
               <Link href="/otros"><HoverableText t={t.OPTION} /></Link>
             </div>
 
-            <footer className="bottom-0 text-xs lg:text-sm text-neutral-400 lg:w-2/3">
+            <footer className="bottom-0 text-xs lg:text-sm text-neutral-400 lg:w-2/3 bg-black bg-opacity-50 backdrop-blur-md rounded">
               {t.FOOTER}
             </footer>
           </div>
         </div>
 
-        <div className="relative z-10 flex-1 lg:basis-2/5 aspect-video">
+        <div>
           <ImageFrame />
         </div>
       </main>

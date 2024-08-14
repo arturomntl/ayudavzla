@@ -4,6 +4,7 @@ export interface Translations {
   HEADER: string;
   PARAGRAPH: string;
   COMPONENT: string;
+  TIMELINE: string;
   OPTION: string;
   FOOTER: string;
   BUTTON: string;
